@@ -1,4 +1,21 @@
 .redBar{
     background-color: rgb(238,21,21);
-    height: 15%;
+    padding: 3%;
+}
+
+body {
+    background-color: rgb(240,240,240);
+}
+
+img {
+    width: 30%;
+    height: 30%;
+}
+.box {
+    border: solid 1px black;
+    height: 300px;
+}
+.fullsize{
+    width: 100%;
+    height: 100%;
 }
