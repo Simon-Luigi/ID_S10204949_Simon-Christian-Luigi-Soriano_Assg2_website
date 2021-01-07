@@ -15,10 +15,9 @@ function DisplaySets(response){
   let setName = response.sets[i].name;
   let setReleaseDate = response.sets[i].releaseDate;
   let setCards = response.sets[i].totalCards;
-  let setData = `<div class = "box col-md-4" onclick = "location.href='./chosenset.html?=set=${setCode}';">` + `<img src = "${setImage}" />` + `<h2>${setName} set</h2>` + `<h3>${setCards} Cards</h3>` + `<h3>Release date : ${setReleaseDate}</h3>` + "</div>";
+  let setData = `<div class = "box col-md-4" onclick = "location.href='./chosenset.html?setCode=${setCode}';">` + `<img src = "${setImage}" />` + `<h2>${setName} set</h2>` + `<h3>${setCards} Cards</h3>` + `<h3>Release date : ${setReleaseDate}</h3>` + "</div>";
   $("#InitSets").append(setData);
   console.log(setData);
   };
 };
-
 
