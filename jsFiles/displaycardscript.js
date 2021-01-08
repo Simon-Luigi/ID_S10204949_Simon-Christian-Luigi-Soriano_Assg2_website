@@ -8,20 +8,35 @@ var getCards = {
   "timeout": 0,
 };
 
-
-$.ajax(getCards).done(function (response) {
-  DisplayCards(response);
+$(document).ready(function() {
+  $.ajax(getCards).done(function (response) {
+    InputSetName(response);
+    DisplayCards(response);
+  });
+  FilterCards();
 });
+  
 
 function DisplayCards(response){
     
     for (var i = 0; i < Object.keys(response.cards).length - 1; i++){
         let cardId = response.cards[i].id
         let cardImage = response.cards[i].imageUrl
-        let cardData = `<div class = "col-md-3" onclick = "location.href='./chosencard.html?card=${cardId}';">` + `<img class = "fullsize" src = "${cardImage}" />` + "</div>";
+        let cardType = response.cards[i].supertype.toLowerCase();
+        let cardData = `<div class = "col-md-3 ${cardType}" onclick = "location.href='./chosencard.html?card=${cardId}';">` + `<img class = "pokemonCard" src = "${cardImage}" />` + "</div>";
         $("#InitCards").append(cardData);
         console.log(cardId)
-        console.log(i)
+        console.log(cardData)
     }
 }
 
+function FilterCards(){
+  $('input[type="checkbox"]').click(function () { 
+    var inputValue = $(this).attr("value"); 
+    $("." + inputValue).toggle(); 
+  }); 
+}
+function InputSetName(response){
+  const CHOSENSET = response.cards[0].set;
+  $("#ChosenSet").html(`${CHOSENSET} Set`);
+}

@@ -14,18 +14,29 @@
   <body>
     <div class = "redBar"> </div>
     <header>
-      <img class = "" src = "" alt = "Return to main page"/> 
-      <h1 class = "chosenSet"></h1>
+      <img class = "returnImage" src = "./images/goBack.png" onclick= "location.href='./main.html'" alt = "Return to main page"/>
+      <h1 id = "ChosenSet"></h1>
     </header>
     <section>
       <div id = "HideFeature">
-        <p>Choose card type you want to hide!</p>
-        <label for="hideTrainers">Hide Trainer type cards</label><br>
-        <input type="checkbox" name="hideTrainer">
-        <label for="hidePokemons">Hide Pokémon type cards</label><br>
-        <input type="checkbox" name="hideTrainer">
-        <label for="hideEnergys">Hide Energy type cards/label><br>
-        <input type="checkbox" name="hideTrainer">
+        <p>Filter card by type here!</p>
+        <div> 
+          <!--checkboxes-->
+          <label><input type="checkbox" 
+              name="colorCheckbox" value="trainer"> 
+              Trainer cards
+          </label> 
+
+          <label><input type="checkbox" 
+              name="colorCheckbox" value="pokémon">  
+              Pokémon cards
+          </label> 
+    
+          <label><input type="checkbox" 
+              name="colorCheckbox" value="energy">  
+              Energy cards 
+          </label> 
+        </div> 
       </div>
       <div class = "container">
         <div id = "InitCards" class = "row"></div>

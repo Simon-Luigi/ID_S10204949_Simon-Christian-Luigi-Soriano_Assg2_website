@@ -8,9 +8,19 @@ var getChosenCard = {
     "timeout": 0,
 };
 
-$.ajax(getChosenCard).done(function (data) {
-    InputCardValues(data);
-});
+
+$(document).ready(function() {
+    $.ajax(getChosenCard).done(function (data) {
+        InputCardValues(data);
+        ChangeOnClick(data);
+    });
+  });
+    
+function ChangeOnClick(data){
+    let chosenSetName = data.card.id.substr(0, data.card.id.indexOf('-')); 
+    console.log(chosenSetName)
+    $(".chkSet").attr("onclick", `location.href = './chosenset.html?setCode=${chosenSetName}'`);
+}
 
 function InitializeChosenCard(data){
     //give all neccessary card data variables
@@ -53,7 +63,7 @@ function InputCardValues(data){
         $(".cardRarity").html(`Rarity: ${CARDDATA[4]}`);
         $(".cardId").html(`Card Id: ${CARDDATA[6]}`);
         $(".setName").html(`Card Series: ${CARDDATA[3]}`);
-        $(".chosenCardIcon").addClass(`energy ${typing}`);
+        $(".chosenCardIcon").addClass(`energyType ${typing}`);
     }
     else{ //card is energy type
         $(".chosenCard").attr("src",`${CARDDATA[1]}`);
@@ -98,3 +108,4 @@ function InputCardRules(data){
     }
 
 }
+
