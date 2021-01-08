@@ -1,1 +1,22 @@
-# ID_S10204949_Simon-Christian-Luigi-Soriano_Assg2
+# Name and particulars
+Name: Simon Christian Luigi Soriano<br />
+Class: P01<br />
+ID: 10204949B<br />
+Website URL: <br/>
+
+## Task details
+| Task        | Status           | Date finished  |
+| ------------- |:-------------:| -----:|
+| Add HTML and features using javascript for website      | done | 7/01/2021 - 9/01/2021|
+
+## Design Process
+## Features
+## Extra features not included in wireframe
+## Testing
+### Screen size
+## Credits
+### Icons
+
+### Guides
+### Certain parts of the website was inspired by
+*
