@@ -27,7 +27,7 @@ Mobile view: https://xd.adobe.com/view/3df79fdc-1655-4526-90c4-318522ecc145-68a4
   
 There is a variety of features in this site to allow the website to be presented in a visually-appealing manner and ensure that the user is able to have an enjoyable time when navigating the website. Some of the features are also needed for the website to display the content it is intended to show in the first place to users.
 
-1. Using multiple features of Bootstrap v5.0 such as the grid layout, the card component as well as the spacing aligning helps the website to look visually pleasing towards the user and content is not cluttered and instead organised smoothly.
+1. Using multiple features of Bootstrap v4.5.3 such as the grid layout, the card component as well as the spacing aligning helps the website to look visually pleasing towards the user and content is not cluttered and instead organised smoothly.
 2. Multiple javascript files that gathers data from Pokémon TCG Developers API and translates it into the various different pages of the website and these scripts gather the latest information as the API is updated so that it ensures that all Pokémon card sets is displayed to the user.
 3. Responsive clickable content so that it makes it easier for users to know where to navigate to.
 
@@ -54,7 +54,7 @@ These are the list of screen sizes that has been tested:
 <h3>APIs/Libraries used</h3>
 
 * Pokémon TCG API - https://api.pokemontcg.io
-* Bootstrap v5.0.0 - https://getbootstrap.com/
+* Bootstrap v4.5.3 - https://getbootstrap.com/
 
 <h3>Images used</h3>
 
@@ -81,3 +81,4 @@ These are the list of screen sizes that has been tested:
 1. I do not own the CSS animated pokeball and it is purely forked and edited to make the website more visually pleasing. All credits of the animation go to Raúl Barrera
 2. The inspiration of my website mainly goes to https://pokemontcg.io/ for giving me the idea on how should the structure of the website should look like.
 3. Fonts used such such as the Rubiks font were imported from Google Fonts.
+4. I used bootstrap V4.5.3 instead of the latest version (V5.0.0) as i got the boostrap from forking one of the examples from the slides in the ID module and cannot change it as it would affect the whole website
