@@ -81,6 +81,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
    }
+h1{
+    font-size: 36px;
+}
+
+h2{
+    font-size: 24px;
+}
 p {
     font-size: 20px;
 }
@@ -225,7 +232,7 @@ p {
 
 @media only screen and (max-width: 	540px) {
     p{
-        font-size: 16px;
+        font-size: 12px;
     }
     .infoSection .card-text{
         font-size: 24px;
