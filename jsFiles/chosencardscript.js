@@ -1,6 +1,6 @@
+let window = Window & typeof globalThis;
 var chosenCard = window.location.search;
-chosenCard = chosenCard.replace("?card=", ''); 
-console.log(chosenCard);
+let chosenCard = chosenCard.replace("?card=",''); 
 
 var getChosenCard = {
     "url": `https://api.pokemontcg.io/v1/cards/${chosenCard}`,
@@ -18,7 +18,6 @@ $(document).ready(function() {
     
 function ChangeOnClick(data){
     let chosenSetName = data.card.id.substr(0, data.card.id.indexOf('-')); 
-    console.log(chosenSetName)
     $(".chkSet").attr("onclick", `location.href = './chosenset.html?setCode=${chosenSetName}'`);
 }
 
