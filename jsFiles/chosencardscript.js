@@ -1,5 +1,6 @@
-var chosenCard = location.search;
-chosenCard = chosenCard.replace("?card=",''); 
+var chosenCard = window.location.search;
+chosenCard = chosenCard.replace("?card=", ''); 
+console.log(chosenCard);
 
 var getChosenCard = {
     "url": `https://api.pokemontcg.io/v1/cards/${chosenCard}`,
@@ -16,23 +17,24 @@ $(document).ready(function() {
   });
     
 function ChangeOnClick(data){
-    var chosenSetName = data.card.id.substr(0, data.card.id.indexOf('-')); 
+    let chosenSetName = data.card.id.substr(0, data.card.id.indexOf('-')); 
+    console.log(chosenSetName)
     $(".chkSet").attr("onclick", `location.href = './chosenset.html?setCode=${chosenSetName}'`);
 }
 
 function InitializeChosenCard(data){
     //give all neccessary card data variables
-    var cardName = data.card.name;
-    var cardImage = data.card.imageUrlHiRes;
-    var cardArtist = data.card.artist;
-    var cardSeries = data.card.series;
-    var cardRarity = data.card.rarity;
-    var cardType = data.card.supertype;
-    var cardId = data.card.id;
-    var cardPokedex = data.card.nationalPokedexNumber;
-    var cardSubType = data.card.subtype;
+    let cardName = data.card.name;
+    let cardImage = data.card.imageUrlHiRes;
+    let cardArtist = data.card.artist;
+    let cardSeries = data.card.series;
+    let cardRarity = data.card.rarity;
+    let cardType = data.card.supertype;
+    let cardId = data.card.id;
+    let cardPokedex = data.card.nationalPokedexNumber;
+    let cardSubType = data.card.subtype;
     
-    var cardData = [cardName,cardImage,cardArtist,cardSeries,cardRarity,cardType,cardId,cardPokedex,cardSubType];
+    let cardData = [cardName,cardImage,cardArtist,cardSeries,cardRarity,cardType,cardId,cardPokedex,cardSubType];
     return cardData;
 }
 /*0 = name, 1 = image, 2 = artist, 3 = series name, 4 = rarity, 5 = card class, 6 = Id, 7 = pokedex, 8 = subtype*/
@@ -50,8 +52,8 @@ function InputCardValues(data){
         $(".setName").html(`${CARDDATA[3]}`);
         $(".chosenCardIcon").append('<img class = "trainerIcon" src = "./images/trainerIcon.png" />')
     }else if (CARDDATA[5] === "Pokémon"){
-        var cardElement = data.card.types[0];
-        var typing = cardElement.toLowerCase();
+        let cardElement = data.card.types[0];
+        let typing = cardElement.toLowerCase();
         $(".chosenCard").attr("src",`${CARDDATA[1]}`);
         $(".chosenCardName").html(`${CARDDATA[0]}`);
         $(".chosenCardClass").html(`${CARDDATA[5]} - ${CARDDATA[8]}`);
@@ -83,7 +85,7 @@ function InputCardValues(data){
 }
 
 function InputCardRules(data){
-    var chkCard = InitializeChosenCard(data);
+    let chkCard = InitializeChosenCard(data);
     if (chkCard[5] === "Trainer"){
         $("#rulesOrAttacks").append('<p class = "text-secondary rules" >Rules</p>');
         for (i = 0; Object.keys(data.card.text).length - 1 >= i; i++){
