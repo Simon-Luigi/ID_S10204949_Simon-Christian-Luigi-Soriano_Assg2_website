@@ -5,7 +5,7 @@ ID: 10204949B<br />
 Website URL: <br/>
 
 ## Task details
-| Task        | Status           | Date finished  |
+| Task        | Status           | Process completion date  |
 | ------------- |:-------------:| -----:|
 | Add HTML and features using javascript for website      | done | 7/01/2021 - 9/01/2021|
 

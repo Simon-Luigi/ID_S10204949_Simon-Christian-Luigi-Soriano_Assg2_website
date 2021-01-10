@@ -5,40 +5,65 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles/style.css">
     <link href="styles/normalize.css" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-        crossorigin="anonymous">
+        crossorigin="anonymous"/>
     <title>Card chosen</title>
   </head>
   <body>
-    <div class = "redBar"> </div>
+    <div class = "bar-sm"></div>
+    <div class = "red-bar-sm"></div>
     <section>
-      <img class = "returnImage chkSet" src = "./images/goBack.png" onclick = "" alt = "Go back to chosen set""/>
-      <div>
-        <div>
-          <img class = "chosenCard" src = "" alt = "Chosen pokemon card"/>
-        </div>
-        <div>
-          <div>
-            <h2 class = "chosenCardName"></h2>
-            <p class = "chosenCardClass"></p>
-            <div class = "chosenCardIcon"></div>
+      <img class = "returnImageChosen chkSet" src = "./images/goBack.png" onclick = "" alt = "Go back to chosen set"/>
+      <div class = "container mb-5">
+        <div class = "row">
+          <div class = "col-lg-6 text-center text-lg-left">
+            <img class = "chosenCard" src = "" alt = "Chosen pokemon card"/>
           </div>
-          <div id = "rulesOrAttacks" class = "">
-          </div>
-          <div>
-            <h3 class = "pokedexNum"></h3>
-            <h3 class = "cardType"></h3>
-            <h3 class = "cardArtist"></h3>
-            <h3 class = "cardRarity"></h3>
-            <h3 class = "cardId"></h3>
-            <h3 class = "setName"></h3>
+          <div class = "col-lg-6">
+            <div class = "mb-3 mt-lg-0 mt-5">
+              <p class = "chosenCardName d-inline-block"></p>
+              <p class = "chosenCardClass d-inline-block ml-lg-2 ml-0 text-muted"></p>
+              <div class = "chosenCardIcon d-inline-block ml-lg-2 ml-0 mt-3"></div>
+            </div>
+            <div id = "rulesOrAttacks">
+            </div>
+            <div class = "container mt-3">
+              <div class = row>
+                <div class = "infoSection col-10 col-lg-6 mb-lg-4 card-body reducePadding">
+                  <p class="card-text text-secondary text-center">National Pokedex Number</p>
+                  <p class = "card-title  text-center pokedexNum"></p>
+                </div>
+
+                <div class = "infoSection col-10 col-lg-6 mb-lg-4 card-body reducePadding">
+                  <p class="card-text text-secondary text-center">Artist</p>
+                  <p class = "card-title  text-center cardArtist"></p>
+                </div>
+              </div>
+              <div class = row>
+                <div class = "infoSection col-10 col-lg-4 mb-lg-4 card-body reducePadding">
+                  <p class="card-text text-secondary text-center">Rarity</p>
+                  <p class = "card-title  text-center cardRarity"></p>
+                </div>
+                <div class = "infoSection col-10 col-lg-4 mb-lg-4 card-body reducePadding">
+                  <p class="card-text text-secondary text-center">Card Id</p>
+                  <p class = "card-title  text-center cardId"></p>
+                </div>
+                <div class = "infoSection col-10 col-lg-4 mb-lg-4 card-body reducePadding">
+                  <p class="card-text text-secondary text-center">Card series</p>
+                  <p class = "card-title  text-center setName"></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
     </section>
-    <div class = "redBar"> </div>
+    <div class = "red-bar"></div>
+    <div class = "bar"></div>
     <script src="./jsFiles/chosencardscript.js"></script>
   </body>
 </html>

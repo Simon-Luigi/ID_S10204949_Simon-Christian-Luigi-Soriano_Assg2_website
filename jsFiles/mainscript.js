@@ -19,7 +19,11 @@ function DisplaySets(response){
   let setName = response.sets[i].name;
   let setReleaseDate = response.sets[i].releaseDate;
   let setSymbol = response.sets[i].symbolUrl;
-  let setData = `<div class = "box col-md-4" onclick = "location.href='./chosenset.html?setCode=${setCode}';">` + `<img src = "${setImage}" />` + `<h2>${setName} Set</h2>` + `<h3>Release date : ${setReleaseDate}</h3>` + `<img src = "${setSymbol}" />` + "</div>";
+  let setData = `<div class = "card mx-auto setGrow" style = "width: 20rem;" onclick = "location.href='./chosenset.html?setCode=${setCode}';">` + 
+  '<div class = "card-img">' + `<img src = "${setImage}" />` + "</div>" + '<div class = "card-content">' +
+  '<div class = "media">' +  '<div class = "media-content">' + `<h5 class = "card-title">${setName} Set</h5>` +
+  `<p class = "card-text text-secondary">Released: ${setReleaseDate}</p>` + "</div>" + '<div class = "media-right">'  +
+  `<img class = "symbol" src = "${setSymbol}" />` + "</div> </div> </div> </div>" ;
   $("#InitSets").append(setData);
   console.log(setData);
   };

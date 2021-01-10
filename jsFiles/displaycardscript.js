@@ -21,9 +21,9 @@ function DisplayCards(response){
     
     for (var i = 0; i < Object.keys(response.cards).length - 1; i++){
         let cardId = response.cards[i].id
-        let cardImage = response.cards[i].imageUrl
+        let cardImage = response.cards[i].imageUrlHiRes
         let cardType = response.cards[i].supertype.toLowerCase();
-        let cardData = `<div class = "col-md-3 ${cardType}" onclick = "location.href='./chosencard.html?card=${cardId}';">` + `<img class = "pokemonCard" src = "${cardImage}" />` + "</div>";
+        let cardData = `<div class = "text-center col-md-3 ${cardType}" onclick = "location.href='./chosencard.html?card=${cardId}';">` + `<img class = "pokemonCard" src = "${cardImage}" />` + "</div>";
         $("#InitCards").append(cardData);
         console.log(cardId)
         console.log(cardData)

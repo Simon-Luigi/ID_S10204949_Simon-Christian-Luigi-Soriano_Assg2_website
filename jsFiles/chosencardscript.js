@@ -46,36 +46,39 @@ function InputCardValues(data){
         $(".chosenCardName").html(`${CARDDATA[0]}`);
         $(".chosenCardClass").html(`${CARDDATA[5]} - ${CARDDATA[8]}`);
         $(".pokedexNum").html("N/A");
-        $(".cardType").html("N/A");
-        $(".cardArtist").html(`Artist: ${CARDDATA[2]}`);
-        $(".cardRarity").html(`Rarity: ${CARDDATA[4]}`);
-        $(".cardId").html(`Card Id: ${CARDDATA[6]}`);
-        $(".setName").html(`Card Series: ${CARDDATA[3]}`);
-        $(".chosenCardIcon").append('<img src = "./images/trainerIcon.png" />')
+        $(".cardArtist").html(`${CARDDATA[2]}`);
+        $(".cardRarity").html(`${CARDDATA[4]}`);
+        $(".cardId").html(`${CARDDATA[6]}`);
+        $(".setName").html(`${CARDDATA[3]}`);
+        $(".chosenCardIcon").append('<img class = "trainerIcon" src = "./images/trainerIcon.png" />')
     }else if (CARDDATA[5] === "Pokémon"){
         let cardElement = data.card.types[0];
         let typing = cardElement.toLowerCase();
         $(".chosenCard").attr("src",`${CARDDATA[1]}`);
         $(".chosenCardName").html(`${CARDDATA[0]}`);
         $(".chosenCardClass").html(`${CARDDATA[5]} - ${CARDDATA[8]}`);
-        $(".pokedexNum").html(`National Pokedex Number: ${CARDDATA[7]}`);
-        $(".cardArtist").html(`Artist: ${CARDDATA[2]}`);
-        $(".cardRarity").html(`Rarity: ${CARDDATA[4]}`);
-        $(".cardId").html(`Card Id: ${CARDDATA[6]}`);
-        $(".setName").html(`Card Series: ${CARDDATA[3]}`);
-        $(".chosenCardIcon").addClass(`energyType ${typing}`);
+        $(".pokedexNum").html(`${CARDDATA[7]}`);
+        $(".cardArtist").html(`${CARDDATA[2]}`);
+        $(".cardRarity").html(`${CARDDATA[4]}`);
+        $(".cardId").html(`${CARDDATA[6]}`);
+        $(".setName").html(`${CARDDATA[3]}`);
+        $(".chosenCardIcon").addClass(`energyTypeIcon energyType ${typing}`);
     }
     else{ //card is energy type
         $(".chosenCard").attr("src",`${CARDDATA[1]}`);
         $(".chosenCardName").html(`${CARDDATA[0]}`);
         $(".chosenCardClass").html(`${CARDDATA[5]} - ${CARDDATA[8]}`);
         $(".pokedexNum").html("N/A");
-        $(".cardType").html("N/A");
-        $(".cardArtist").html(`Artist: ${CARDDATA[2]}`);
-        $(".cardRarity").html(`Rarity: ${CARDDATA[4]}`);
-        $(".cardId").html(`Card Id: ${CARDDATA[6]}`);
-        $(".setName").html(`Card Series: ${CARDDATA[3]}`);
-        $(".chosenCardIcon").append('<img src = "./images/energyIcon.png" />');
+        if (typeof CARDDATA[2] === 'undefined'){
+            $(".cardArtist").html("N/A");
+        }
+        else{
+            $(".cardArtist").html(`${CARDDATA[2]}`);
+        }
+        $(".cardRarity").html(`${CARDDATA[4]}`);
+        $(".cardId").html(`${CARDDATA[6]}`);
+        $(".setName").html(`${CARDDATA[3]}`);
+        $(".chosenCardIcon").append('<img class = "energyIcon" src = "./images/energyIcon.png" />');
     }
 
     InputCardRules(data);
@@ -84,23 +87,20 @@ function InputCardValues(data){
 function InputCardRules(data){
     let chkCard = InitializeChosenCard(data);
     if (chkCard[5] === "Trainer"){
-        $("#rulesOrAttacks").append("<h3>Rules</h3>");
-        for (i = 0; i <= Object.keys(data.card.text).length - 1; i++){
-            $("#rulesOrAttacks").append(`<p>${data.card.text[i]}</p>`);
-            $("#rulesOrAttacks").append(`<br>`);
-            
+        $("#rulesOrAttacks").append('<p class = "text-secondary rules" >Rules</p>');
+        for (i = 0; Object.keys(data.card.text).length - 1 >= i; i++){
+            $("#rulesOrAttacks").append(`<p class = "mb-4 ruleDesc">${data.card.text[i]}</p>`);
+            console.log(i)
         }
-
     }else if (chkCard[5] === "Pokémon"){
         for (i = 0; i <= Object.keys(data.card.attacks).length - 1; i++){
             if (data.card.attacks[i].damage === ""){
-                $("#rulesOrAttacks").append(`<h3>${data.card.attacks[i].name}</h3>`);
+                $("#rulesOrAttacks").append(`<p class = "attackName pb-2 text-secondary">${data.card.attacks[i].name}</p>`);
             }
             else{
-                $("#rulesOrAttacks").append(`<h3>${data.card.attacks[i].name} | ${data.card.attacks[i].damage}</h3>`);
+                $("#rulesOrAttacks").append(`<p class = "attackName text-secondary">${data.card.attacks[i].name} | ${data.card.attacks[i].damage}</p>`);
             }
-            $("#rulesOrAttacks").append(`<p>${data.card.attacks[i].text}</p>`);
-            console.log(i);
+            $("#rulesOrAttacks").append(`<p class = "pb-2 attackDesc">${data.card.attacks[i].text}</p>`);
         }
     }
     else{ //card is energy type
