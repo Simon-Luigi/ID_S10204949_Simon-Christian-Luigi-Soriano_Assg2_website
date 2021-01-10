@@ -1,6 +1,5 @@
-let window = Window & typeof globalThis;
-var chosenCard = window.location.search;
-let chosenCard = chosenCard.replace("?card=",''); 
+var chosenCard = location.search;
+var chosenCard = chosenCard.replace("?card=",''); 
 
 var getChosenCard = {
     "url": `https://api.pokemontcg.io/v1/cards/${chosenCard}`,
@@ -17,23 +16,23 @@ $(document).ready(function() {
   });
     
 function ChangeOnClick(data){
-    let chosenSetName = data.card.id.substr(0, data.card.id.indexOf('-')); 
+    var chosenSetName = data.card.id.substr(0, data.card.id.indexOf('-')); 
     $(".chkSet").attr("onclick", `location.href = './chosenset.html?setCode=${chosenSetName}'`);
 }
 
 function InitializeChosenCard(data){
     //give all neccessary card data variables
-    let cardName = data.card.name;
-    let cardImage = data.card.imageUrlHiRes;
-    let cardArtist = data.card.artist;
-    let cardSeries = data.card.series;
-    let cardRarity = data.card.rarity;
-    let cardType = data.card.supertype;
-    let cardId = data.card.id;
-    let cardPokedex = data.card.nationalPokedexNumber;
-    let cardSubType = data.card.subtype;
+    var cardName = data.card.name;
+    var cardImage = data.card.imageUrlHiRes;
+    var cardArtist = data.card.artist;
+    var cardSeries = data.card.series;
+    var cardRarity = data.card.rarity;
+    var cardType = data.card.supertype;
+    var cardId = data.card.id;
+    var cardPokedex = data.card.nationalPokedexNumber;
+    var cardSubType = data.card.subtype;
     
-    let cardData = [cardName,cardImage,cardArtist,cardSeries,cardRarity,cardType,cardId,cardPokedex,cardSubType];
+    var cardData = [cardName,cardImage,cardArtist,cardSeries,cardRarity,cardType,cardId,cardPokedex,cardSubType];
     return cardData;
 }
 /*0 = name, 1 = image, 2 = artist, 3 = series name, 4 = rarity, 5 = card class, 6 = Id, 7 = pokedex, 8 = subtype*/
@@ -51,8 +50,8 @@ function InputCardValues(data){
         $(".setName").html(`${CARDDATA[3]}`);
         $(".chosenCardIcon").append('<img class = "trainerIcon" src = "./images/trainerIcon.png" />')
     }else if (CARDDATA[5] === "Pokémon"){
-        let cardElement = data.card.types[0];
-        let typing = cardElement.toLowerCase();
+        var cardElement = data.card.types[0];
+        var typing = cardElement.toLowerCase();
         $(".chosenCard").attr("src",`${CARDDATA[1]}`);
         $(".chosenCardName").html(`${CARDDATA[0]}`);
         $(".chosenCardClass").html(`${CARDDATA[5]} - ${CARDDATA[8]}`);
@@ -84,7 +83,7 @@ function InputCardValues(data){
 }
 
 function InputCardRules(data){
-    let chkCard = InitializeChosenCard(data);
+    var chkCard = InitializeChosenCard(data);
     if (chkCard[5] === "Trainer"){
         $("#rulesOrAttacks").append('<p class = "text-secondary rules" >Rules</p>');
         for (i = 0; Object.keys(data.card.text).length - 1 >= i; i++){
