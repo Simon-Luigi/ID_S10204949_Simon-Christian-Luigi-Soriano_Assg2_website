@@ -1,4 +1,4 @@
-var chosenCard = location.search;
+var chosenCard = windows.location.search;
 var chosenCard = chosenCard.replace("?card=",''); 
 
 var getChosenCard = {
