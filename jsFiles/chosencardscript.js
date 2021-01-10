@@ -1,5 +1,5 @@
 var chosenCard = location.search;
-var chosenCard = chosenCard.replace("?card=",''); 
+chosenCard = chosenCard.replace("?card=",''); 
 
 var getChosenCard = {
     "url": `https://api.pokemontcg.io/v1/cards/${chosenCard}`,
