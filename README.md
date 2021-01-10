@@ -72,6 +72,7 @@ These are the list of screen sizes that has been tested:
 
 1. Github respository: https://github.com/Simon-Luigi/ID_S10204949_Simon-Christian-Luigi-Soriano_Assg2_website
 2. Github website: https://simon-luigi.github.io/ID_S10204949_Simon-Christian-Luigi-Soriano_Assg2_website/main.html
+3. Pitch video link (As file size is to big to put in github repo): https://drive.google.com/file/d/13zj3tFSDUJQUEt0pr6S5CT5PSP5mdRRG/view?usp=sharing 
 
 <h2>Acknowledgements</h2>
 
