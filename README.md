@@ -63,6 +63,8 @@ These are the list of screen sizes that has been tested:
 * Energy types: https://www.nicepng.com/ourpic/u2w7t4q8t4y3e6y3_basic-energies-pokemon-all-energy-types/
 * Trainer icon: https://vectorified.com/download-image#pokemon-trainer-icon-22.png
 * Energy icon: https://www.smogon.com/articles/pokemon-tcg
+* Go-back icon: https://icons8.com/icon/39815/go-back
+* Cute kanto starters with pikachu image: https://weheartit.com/entry/249459540/dashboard?context_user=caritow95&page=5
 
 <h3>Animation used</h3>
 
