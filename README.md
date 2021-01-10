@@ -2,7 +2,7 @@
 Name: Simon Christian Luigi Soriano<br />
 Class: P01<br />
 ID: 10204949B<br />
-Website URL: <br/>
+Website URL: https://simon-luigi.github.io/ID_S10204949_Simon-Christian-Luigi-Soriano_Assg2_website/main.html<br/>
 
 <h2>Task details</h2>
   
@@ -37,22 +37,44 @@ I have included a filter section that allows users to filter Pokémon cards base
   
 <h2>Testing</h2>
   
-Testing is an important part of creating a website as to search for bugs or to find more ways to improve the website. This website has been tested various times through different mediums to ensure that it is suitable for as much devices as possible
+Testing is an important part of creating a website as to search for bugs or to find more ways to improve the website. This website has been tested various times through two main mediums, which is laptop and mobile display which is used by many users to ensure that it is suitable for as much devices as possible
 
 These are the list of screen sizes that has been tested:
 1. 1920 x 1080 pixels (Laptop Web display size)
-2. 320 x 668 pixels (IPad Pro)
 3. 375 x 812 pixels (IPhone X display size)
   
 <h2>Credits</h2>
-<h2>Icons</h2>
-<h2>Notes</h2>
-<h2>Guides</h2>
+
+<h3>Technologies used</h3>
+
+* HTML 
+* CSS
+* Javascript
+
+<h3>APIs/Libraries used</h3>
+
+* Pokémon TCG API - https://api.pokemontcg.io
+* Bootstrap v5.0.0 - https://getbootstrap.com/
+
+<h3>Images used</h3>
+
+* Stripe 1 : https://www.pokemon.com/sg/
+* Stripe 2: https://www.pokemon.com/sg/
+* Energy types: https://www.nicepng.com/ourpic/u2w7t4q8t4y3e6y3_basic-energies-pokemon-all-energy-types/
+* Trainer icon: https://vectorified.com/download-image#pokemon-trainer-icon-22.png
+* Energy icon: https://www.smogon.com/articles/pokemon-tcg
+
+<h3>Animation used</h3>
+
+* CSS animated pokeball: https://codepen.io/raubaca/pen/obaZmG
 
 <h2>Links</h2>
 
-* Github Site Link: 
-* Github Repostory Link: 
-* ASG2 Pitch Link: 
+1. Github respository: https://github.com/Simon-Luigi/ID_S10204949_Simon-Christian-Luigi-Soriano_Assg2_website
+2. Github website: https://simon-luigi.github.io/ID_S10204949_Simon-Christian-Luigi-Soriano_Assg2_website/main.html
 
 <h2>Acknowledgements</h2>
+
+1. I do not own the CSS animated pokeball and it is purely forked and edited to make the website more visually pleasing. All credits of the animation go to Raúl Barrera
+2. The inspiration of my website mainly goes to https://pokemontcg.io/ for giving me the idea on how should the structure of the website should look like.
+3. Fonts used such such as the Rubiks font were imported from Google Fonts.
